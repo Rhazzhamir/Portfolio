@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+}
+body,html {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #212121, #252525);
+    background: radial-gradient(
+        circle at bottom,
+        rgba(0, 0, 0, 0.5),
+    );
+
+}
+
+button {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.main-container {
+    max-width: 1800px;
+    width: 100%;
+    min-height: 100vh;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+.navbar {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+
+.navbar > .logo {
+    width: 200px;
+    color: #a29f9f;
+    font-family: "Sofia", cursive;
+    font-weight: 1000;
+    font-style: normal;
+    text-align: center;
+    margin-left: 30px;
+
+}
+
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 50px;
+}
+
+.navbar ul a {
+    text-decoration: none;
+    color: #8B8B8B;
+    font-size: 18px;
+    font-weight: 800;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative; /* Necessary for positioning the pseudo-element */
+}
+
+.navbar ul a:hover::before,
+.navbar ul a.active::before {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: #ffffff;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+}
+
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-btn .join-us,.btn-sec .join-us {
+    width: 10rem;
+    text-align: center;
+    padding: 15px 5px;
+    font-size: 18px;
+    font-size: 700;
+    background: linear-gradient(to left top, #9E5030,#C97E3B);
+    border: none;
+    color: #fff;
+    border-radius: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    box-shadow: rgba(0,0,0,0.1) 0px 10px 15px -3px,rgba(0,0,0,0.05) 0px 4px 6px -2px;
+}
+
+.nav-btn .join-us img,.btn-sec .join-us img {
+    width: 20px;
+}
+
+.nav-btn .join-us:hover,.btn-sec .join-us:hover {
+    transition: 0.5s;
+    background: linear-gradient(to right bottom, #9E5030,#C97E3B);
+}
+
+.toggle-btn img {
+    display: none;
+    width: 2.5rem;
+    margin-top: 5px;
+}
+
+.bottom-sec {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 100px;
+    gap: 3%;
+}
+
+.bottom-left {
+    width: 57%;
+    margin-top: 60px;
+}
+
+.bottom-left h3 {
+    color: #a29f9f;
+    font-size: 27px;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+}
+
+.bottom-left h1 {
+    width: 100%;
+    font-size: 80px;
+    line-height: 100px;
+    font-weight: 900;
+    color: #a29f9f;
+    margin-bottom: 10px;
+}
+
+.bottom-left p {
+    width: 90%;
+    color: #8B8B8B;
+    font-size: 16px;
+}
+
+
+
+.play-btn {
+    width: 14.5rem;
+    height: 4rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    gap: 15px;
+    border-radius: 35px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.play-btn::before {
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    background: #FBCD4D;
+    position: absolute;
+    left: 0;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.play-btn:hover::before {
+    width: 100%;
+    border-radius: 0;
+}
+
+.btn-circle {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left top, #EC862B, #FBCD4D);
+    transition: 0.5s;
+    box-shadow: rgba(0,0,0,0.1) 0px 10px 15px -3px,rgba(0,0,0,0.05) 0px 4px 6px -2px;
+}
+
+.btn-circle::before {
+    content: '';
+    width: 1.2rem;
+    height: 1.2rem;
+    background: #fff;
+    position: absolute;
+    clip-path: polygon(0 0,0% 100%,100% 50%);
+    margin-left: 3px;
+}
+
+.play-btn h4 {
+    font-size: 22px;
+    color: #000;
+}
+
+.bottom-right {
+    width: 40%;
+    padding-top: 1rem;
+}
+
+.header-img {
+    width: 100%;
+}
+
+.subscribe {
+    width: 58%;
+    position: absolute;
+    left: -15%;
+    bottom: 12%;
+}
+.subscribe img {
+    width: 100%;
+}
+
+.top-arrow {
+    position: absolute;
+    width: 20%;
+    top: 20%;
+    margin-left: 4%;
+}
+
+@media(max-width:1300px) {
+    .main-container {
+        padding: 20px 5%;
+    }
+    .bottom-left h3 {
+        font-size: 23px;
+        letter-spacing: 5px;
+        margin-bottom: 5px;
+    }
+    .bottom-left h1 {
+        font-size: 50px;
+        line-height: 65px;
+    }
+    .navbar ul li {
+        margin: 0 15px;
+    }
+}
+
+@media(max-width:900px) {
+    .toggle-btn img {
+        display: block;
+    }
+    .navbar ul {
+        display: none;
+        max-width: 400px;
+        width: 100%;
+        background: #9E5030;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        z-index: 1000;
+        padding: 2rem 0;
+    }
+    .navbar ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+    .navbar ul a {
+        color: #FBCD4D;
+    }
+    .navbar ul.show {
+        display: block;
+    }
+    .bottom-sec {
+        flex-direction: column;
+        margin-top: 1.5rem;
+        gap: 0;
+    }
+    .top-arrow {
+        display: none;
+    }
+    .bottom-left {
+        width: 80%;
+    }
+    .bottom-right {
+        max-width: 450px;
+        width: 100%;
+    }
+}
+
+@media(max-width:600px) {
+    .main-container {
+        padding: 10px 5%;
+    }
+    .nav-btn {
+        gap: 15px;
+    }
+
+    .nav-btn .join-us,.btn-sec button {
+        width: 8rem;
+        padding: 12px 5px;
+        font-size: 16px;
+        gap: 5px;
+    }
+    .nav-btn .join-us img,.btn-sec button img {
+        width: 15px;
+    }
+    .toggle-btn img {
+        width: 2rem;
+        margin-top: 3px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+    .bottom-left h3 {
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+    .bottom-left h1 {
+        font-size: 35px;
+        line-height: 45px;
+        margin-bottom: 10px;
+    }
+    .bottom-left p {
+        width: 100%;
+        font-size: 14px;
+    }
+    .btn-sec {
+        justify-content: center;
+        gap: 10px;
+        margin-top: 25px;
+    }
+    .play-btn {
+        width: 11rem;
+        height: 3.5rem;
+        gap: 10px;
+    }
+    .play-btn::before {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    .btn-circle {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    .btn-circle::before {
+        width: 1rem;
+        height: 1rem;
+    }
+    .play-btn h4 {
+        font-size: 18px;
+    }
+    .subscribe {
+        width: 58%;
+        position: absolute;
+        left: 0;
+        bottom: 12%;
+    }
+
+    .bottom-left {
+        width: 100%;
+    }
+}
+

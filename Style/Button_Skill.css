@@ -1,0 +1,54 @@
+    .button-skill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 4px;
+    height: 50px;
+    width: 150px;
+    border: none;
+    background: #1b1b1cd0;
+    border-radius: 20px;
+    cursor: pointer;
+    
+    }
+
+    .lable {
+    line-height: 22px;
+    font-size: 17px;
+    color: #DE8A2A;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    }
+
+    .button-skill:hover {
+    background: #1b1b1cea;
+    }
+
+    .button-skill:hover .svg-icon {
+    animation: rotate 1.3s linear infinite;
+    }
+
+    @keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+    }
+
+
